@@ -28,4 +28,17 @@ public class Musica extends Audio{
     public void setAlbun(String albun) {
         this.albun = albun;
     }
+
+    @Override
+    public double getClassificacao() {
+        if(this.getNumeroCurtidas() >= 1000) {
+            return 10;
+        }
+        else if(this.getNumeroCurtidas() >= 500) {
+            return 5;
+        }
+        else {
+            return 0;
+        }
+    }
 }
