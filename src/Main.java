@@ -1,3 +1,4 @@
+import modelos.MinhasPreferidas;
 import modelos.Musica;
 import modelos.Podcast;
 
@@ -12,7 +13,7 @@ public class Main {
             minhaMusica.reproduz();
         }
 
-        for (int i = 0; i < 600; i++) {
+        for (int i = 0; i < 1000; i++) {
             minhaMusica.curtir();
         }
 
@@ -30,5 +31,8 @@ public class Main {
             meuPodcast.curtir();
         }
 
+        MinhasPreferidas preferidas = new MinhasPreferidas();
+        preferidas.inclui(minhaMusica);
+        preferidas.inclui(meuPodcast);
     }
 }
